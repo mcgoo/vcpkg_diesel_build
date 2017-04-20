@@ -1,0 +1,18 @@
+[submodule "diesel"]
+	path = diesel
+	url = https://github.com/mcgoo/diesel
+[submodule "mysqlclient-sys"]
+	path = mysqlclient-sys
+	url = https://github.com/mcgoo/mysqlclient-sys
+[submodule "pq-sys"]
+	path = pq-sys
+	url = https://github.com/mcgoo/pq-sys
+[submodule "rusqlite"]
+	path = rusqlite
+	url = https://github.com/mcgoo/rusqlite
+[submodule "rust-openssl"]
+	path = rust-openssl
+	url = https://github.com/mcgoo/rust-openssl
+[submodule "vcpkg-rs"]
+	path = vcpkg-rs
+	url = https://github.com/mcgoo/vcpkg-rs
