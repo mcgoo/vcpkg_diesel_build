@@ -1,9 +1,18 @@
+
 cd %~dp0
 
-set VCPKG_ROOT=%~dp0\vcpkg-static
-set VCPKG_ALL_STATIC=on
-set VCPKG_ALL_DYNAMIC=
+git clone https://github.com/Microsoft/vcpkg
+git clone https://github.com/mcgoo/diesel
 
-cd diesel\diesel_cli
-cargo clean
-cargo build
+rem Install database drivers in vcpkg
+set VCPKG_ROOT=%~dp0\vcpkg
+call %VCPKG_ROOT%\bootstrap-vcpkg.bat
+%VCPKG_ROOT%\vcpkg install libmysql:x64-windows-static libpq:x64-windows-static sqlite3:x64-windows-static
+
+rem Build diesel
+cd diesel
+set RUSTFLAGS=-Ctarget-feature=+crt-static
+git checkout vcpkg
+cd diesel_cli
+cargo run --no-default-features --features="use-vcpkg postgres sqlite"
+

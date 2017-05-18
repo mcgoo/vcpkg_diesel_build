@@ -1,2 +1,2 @@
-vcpkg-static/
-vcpkg-dll/
+diesel/ 
+vcpkg/ 
