@@ -14,5 +14,5 @@ cd diesel
 set RUSTFLAGS=-Ctarget-feature=+crt-static
 git checkout vcpkg
 cd diesel_cli
-cargo run --no-default-features --features="use-vcpkg postgres sqlite"
+cargo run --no-default-features --features="postgres sqlite"
 
