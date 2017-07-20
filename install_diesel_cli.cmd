@@ -9,5 +9,5 @@ if not exist %VCPKG_ROOT%\vcpkg.exe call %VCPKG_ROOT%\bootstrap-vcpkg.bat
 %VCPKG_ROOT%\vcpkg --triplet x64-windows-static install libmysql libpq sqlite3
 
 set RUSTFLAGS=-Ctarget-feature=+crt-static
-cargo +nightly install -f diesel_cli
+cargo install -f diesel_cli
 pause
