@@ -1,5 +1,6 @@
 build:
   tags:
     - win64
-  script: 
+  script:
+    - rd /s /q vcpkg
     - install_diesel_cli.cmd
